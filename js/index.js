@@ -15,7 +15,8 @@ let timerId = 0;
 let textArr = {};
 
 function start() {
-    clearTimeout(timerId);
+    index = 0;
+
     textArr = textBox.value.split(" ");
 
     btnStart.hidden = true;
@@ -28,6 +29,7 @@ function start() {
 }
 
 function stop() {
+    index = 0;
     lable.innerText = "Введи текст и нажми Старт"
     btnStart.hidden = false;
     textBox.hidden = false;
