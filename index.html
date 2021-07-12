@@ -1,18 +1,22 @@
-<H1><H1>
-<script>
-debugger;
-let a = ()=>
-{
-var h=document.getElementsByTagName("h1")[0];
-var textArr = "Обычная скорость чтения на русском языке составляет 120—180 слов в минуту. С помощью долгих тренировок можно повысить её где-то до 600 слов в минуту. Совсем недавно небольшой стартап из Бостона представил новую технологию под названием Spritz".split(" ");
-var i = 0;
-return ()=> {
-if(i == textArr.length){
-i=0;
-}
-h.innerText = textArr[i]
-i = i+1;
-}
-}
-let timerId = setInterval(a(), 200);
-</script>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Хрень для Димона</title>
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <h1 id="lable">Введи текст и нажми Старт</h1>
+    <textarea id="textBox"></textarea>
+    скорость <input type="text" id="speed" value="200">
+    <button id="btnStart" onclick="start()">Старт</button>
+    <button id="btnStop" onclick="stop()">Стоп</button>
+
+</body>
+<script src="js/index.js"></script>
+
+</html>
